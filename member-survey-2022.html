@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://www.huaweifans.com.tw/assets/images/common/favicon.ico">
+  <link rel="stylesheet" href="https://www.huaweifans.com.tw/assets/styles/base.css?v=20220607">
+  <title>華為有禮 花粉回娘家 月月抽活動 | 活動專區 | 華為台灣活動網站</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+  <link rel="stylesheet" href="https://www.huaweifans.com.tw/assets/styles/events-register.css?v=20200401">
+  <style>
+    button:disabled,
+    button.disabled { opacity: 0.5; }
+    button.temp__sent { height: 43px; }
+    .content p,
+    .content ul { margin-top: 1em; }
+    td .temp__input { margin-top: 0; }
+    label.upload { cursor: pointer; }
+
+    div.flex div.center {
+      margin: 10px 0;
+    }
+    .temp__item p.description {
+      margin: -5px 0 10px 0;
+    }
+    .temp__label p {
+      margin-top: -5px!important;
+    }
+    div.list {
+      margin-top: 20px;
+    }
+    div.list > table {
+      width: 100%;
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+    div.list > table thead th,
+    div.list > table tbody td {
+      padding: 5px;
+      background-color: #f7f8fa;
+      border: #fff solid 2.7px;
+      text-align: center;
+    }
+    div.list.prize > table tbody td {
+      text-align: left;
+    }
+    div.list > table thead th {
+      font-weight: bold;
+      color: #1e1e1e;
+    }
+    div.list > table .thumb {
+      margin-top: 10px;
+    }
+    div.list > table .thumb img {
+      width: 60px;
+    }
+    div.list > table .category {
+      display: none;
+    }
+    @media  screen and (min-width: 577px) {
+      div.flex {
+        display: flex;
+      }
+      div.flex > div {
+        flex: 1;
+      }
+      div.flex > div.center {
+        margin: 0 10px;
+      }
+      .temp__item p.description {
+        margin: -20px 0 20px 0;
+      }
+      .temp__label p {
+        margin-top: -9px!important;
+      }
+      div.list {
+        margin-top: 10px;
+      }
+      div.list > table {
+        font-size: 1rem;
+      }
+      div.list > table thead th,
+      div.list > table tbody td {
+        padding: 10px;
+      }
+      div.list > table .category {
+        display: table-cell;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+      <svg width="50px" height="34px" viewbox="0 0 50 34" class="header__hamburger">
+        <g>
+          <rect fill="#808080" width="50" height="2"></rect>
+          <rect y="32" fill="#808080" width="50" height="2"></rect>
+          <rect y="16" fill="#808080" width="50" height="2"></rect>
+        </g>
+      </svg><a href="/" class="header__logo"><img src="https://www.huaweifans.com.tw/assets/images/common/logo.png" alt="HUAWEI" data-t-cat="Global Nav" data-t-act="Main" data-t-label="Logo"></a>
+      <div class="header__searchArea">
+        <input type="text" placeholder="搜尋華為台灣活動網站" class="header__searchInput">
+        <div class="header__search"><img src="https://www.huaweifans.com.tw/assets/images/common/search.svg" alt=""></div>
+      </div>
+      <div class="header__features">
+        <!--
+        <a href=""><img src="https://www.huaweifans.com.tw/assets/images/common/search.png" alt="search" class="header__search"></a>
+        -->
+        <p>掌握獨家消息</p>
+                  <a href="https://www.huaweifans.com.tw/users/login" data-t-cat="Global Nav" data-t-act="Main">
+            <img src="https://www.huaweifans.com.tw/assets/images/common/member.png" alt="member" class="header__member" />
+            登入
+          </a>
+          <a href="/users/register/" data-t-cat="Global Nav" data-t-act="Main">註冊</a>
+              </div>
+      <nav class="nav">
+        <ul class="nav__list nav__list--border">
+          <li class="nav__item nav__itemControl"><a data-t-cat="Global Nav" data-t-act="Main">平板電腦</a>
+            <div class="nav__itemProductLightBox">
+              <div class="nav__itemProductContainer">
+                <p class="nav__itemProductTitle">熱門主打商品</p>
+                <div class="nav__itemProduct"><a href="/tablets/matepad-11/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matepad-11.png" alt="HUAWEI MatePad 11" class="nav__itemProductTablets">
+                    <p class="nav__itemProductPhoneName">HUAWEI MatePad 11</p></a></div>
+                <div class="nav__itemProduct"><a href="/tablets/matepad-2022/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matepad-2022.png" alt="HUAWEI MatePad 2022" class="nav__itemProductTablets">
+                    <p class="nav__itemProductPhoneName">HUAWEI MatePad 2022</p></a></div>
+                <div class="nav__itemProduct"><a href="/tablets/matepad-t-10s/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matepad-t-10s.png" alt="HUAWEI MatePad T 10" class="nav__itemProductTablets">
+                    <p class="nav__itemProductPhoneName">HUAWEI MatePad T 10s</p></a></div>
+                <div class="nav__itemProduct"><a href="/tablets/matepad-t-10/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matepad-t-10.png" alt="HUAWEI MatePad T 10" class="nav__itemProductTablets">
+                    <p class="nav__itemProductPhoneName">HUAWEI MatePad T 10</p></a></div>
+                <div class="nav__itemProduct">
+                  <a href="/tablets/" data-t-cat="Global Nav" data-t-act="Hot">
+                    <img src="https://www.huaweifans.com.tw/assets/images/common/allTablet.png" alt="查看所有平板電腦" class="nav__itemProductTablets">
+                    <p class="nav__itemProductPhoneName">查看所有平板電腦</p></a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item nav__itemControl"><a data-t-cat="Global Nav" data-t-act="Main">筆記型電腦</a>
+            <div class="nav__itemProductLightBox">
+              <div class="nav__itemProductContainer">
+                <p class="nav__itemProductTitle">熱門主打商品</p>
+                <div class="nav__itemProduct"><a href="/laptops/matebook-x-pro-2022-12th-gen-core/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matebook-x-pro-2022-12th-gen-core.png" alt="matebook-x-pro-2022-12th-gen-core" class="nav__itemProductLaptops">
+                    <p class="nav__itemProductPhoneName">HUAWEI MateBook X Pro 2022</p></a></div>
+                <div class="nav__itemProduct"><a href="/laptops/matebook-d-16/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matebook-d-16.png?v=2" alt="matebook-d-16" class="nav__itemProductLaptops">
+                    <p class="nav__itemProductPhoneName">HUAWEI MateBook D16</p></a></div>
+                <div class="nav__itemProduct"><a href="/laptops/matebook-d-14-2022-12th/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matebook-d-14-2022-12th.png?v=2" alt="matebook-d-14-2022-12th" class="nav__itemProductLaptops">
+                    <p class="nav__itemProductPhoneName">HUAWEI MateBook D14 2022 12th</p></a></div>
+                <div class="nav__itemProduct"><a href="/laptops/matebook-d-15-2021/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matebook-d-15-2021.png" alt="matebook-d-15-2021" class="nav__itemProductLaptops">
+                    <p class="nav__itemProductPhoneName">HUAWEI MateBook D 15 2021</p></a></div>
+                <div class="nav__itemProduct"><a href="/laptops/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/allNoteBook.png" alt="allPhone" class="nav__itemProductLaptops">
+                    <p class="nav__itemProductPhoneName">查看所有筆記型電腦</p></a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item nav__itemControl"><a data-t-cat="Global Nav" data-t-act="Main">音頻產品</a>
+            <div class="nav__itemProductLightBox">
+              <div class="nav__itemProductContainer">
+                <p class="nav__itemProductTitle">熱門主打商品</p>
+                <div class="nav__itemProduct"><a href="/audio/freebuds-lipstick/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/freebuds-lipstick.png" alt="freebuds-pro" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">HUAWEI FreeBuds Lipstick</p></a></div>
+                <div class="nav__itemProduct"><a href="/audio/freebuds4/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/freebuds4.png" alt="freebuds3" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">HUAWEI FreeBuds 4</p></a></div>
+                <div class="nav__itemProduct"><a href="/audio/freebuds-pro-2/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/freebuds-pro-2.png" alt="freebuds-studio" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">HUAWEI FreeBuds Pro 2</p></a></div>
+                <div class="nav__itemProduct"><a href="/audio/freebuds-se/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/freebuds-se.png" alt="freebuds-se" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">HUAWEI FreeBuds SE</p></a></div>
+                <div class="nav__itemProduct"><a href="/audio/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/allAudio.png" alt="查看所有音頻產品" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">查看所有音頻產品</p></a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item nav__itemControl"><a data-t-cat="Global Nav" data-t-act="Main">穿戴裝置</a>
+            <div class="nav__itemProductLightBox">
+              <div class="nav__itemProductContainer">
+                <p class="nav__itemProductTitle">熱門主打商品</p>
+                <div class="nav__itemProduct"><a href="/wearables/watch-gt3-pro-titanium/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/watch-gt3-pro-titanium.png" alt="watch-gt3-pro-titanium" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI WATCH GT 3 Pro</p></a></div>
+                <div class="nav__itemProduct"><a href="/wearables/watch-gt-runner/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/watch-gt-runner.png" alt="watch-gt-runner" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI WATCH GT Runner</p></a></div>
+                <div class="nav__itemProduct"><a href="/wearables/band7/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/band7.png" alt="band7" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI Band 7</p></a></div>
+                <div class="nav__itemProduct"><a href="/wearables/watch-fit2/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/watch-fit2.png" alt="watch-fit2" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI WATCH FIT 2</p></a></div>
+                <div class="nav__itemProduct"><a href="/wearables/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/allWatch.png" alt="allPhone" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">查看所有穿戴裝置</p></a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item nav__itemControl"><a data-t-cat="Global Nav" data-t-act="Main">更多產品</a>
+            <div class="nav__itemProductLightBox">
+              <div class="nav__itemProductContainer">
+                <p class="nav__itemProductTitle">熱門主打商品</p>
+                <div class="nav__itemProduct">
+                  <a href="/peripherals/smart-office/" data-t-cat="Global Nav" data-t-act="Hot">
+                    <img src="https://www.huaweifans.com.tw/assets/images/common/smart-office.png" alt="smart-office" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">HUAWEI Smart Office</p>
+                  </a>
+                </div>
+                <div class="nav__itemProduct">
+                  <a href="/peripherals/mateview/" data-t-cat="Global Nav" data-t-act="Hot">
+                    <img src="https://www.huaweifans.com.tw/assets/images/common/mateview.png" alt="mateview" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">HUAWEI MateView</p>
+                  </a>
+                </div>
+                <div class="nav__itemProduct">
+                  <a href="/peripherals/ax3-quad-core/" data-t-cat="Global Nav" data-t-act="Hot">
+                    <img src="https://www.huaweifans.com.tw/assets/images/peripherals/ax3-quad-core.png" alt="ax3-quad-core" class="nav__itemProductPhone">
+                    <p class="nav__itemProductPhoneName">HUAWEIAX3</p>
+                  </a>
+                </div>
+                <div class="nav__itemProduct">
+                  <a href="/phones/mate20-x-5g/" data-t-cat="Global Nav" data-t-act="Hot">
+                    <img src="https://www.huaweifans.com.tw/assets/images/common/mate20-x-5g.png" alt="mate20-x-5g" class="nav__itemProductPhone">
+                    <p class="nav__itemProductPhoneName">HUAWEI Mate20 X (5G)</p>
+                  </a>
+                </div>
+                <div class="nav__itemProduct"><a href="/peripherals/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/allPeripherals.png" alt="allPhone" class="nav__itemProductPeripherals">
+                    <p class="nav__itemProductPhoneName">查看所有更多產品</p></a></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item"><a href="/events/" data-t-cat="Global Nav" data-t-act="Main">活動專區</a></li>
+          <li class="nav__item"><a href="/stores/" data-t-cat="Global Nav" data-t-act="Main">華為品牌店/專櫃</a></li>
+          <li class="nav__item"><a href="/service-centers/" data-t-cat="Global Nav" data-t-act="Main">服務中心</a></li>
+          <li class="nav__item nav__itemControl"><a data-t-cat="Global Nav" data-t-act="Main">新知探索</a>
+            <div class="nav__itemProductLightBox">
+              <div class="nav__itemProductContainer">
+                <p class="nav__itemProductTitle">熱門主打商品</p>
+                <div class="nav__itemProduct"><a href="/explore/matepad-t10s/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matepad-t10s-a.png" alt="HUAWEI MatePad" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI MatePad T10s</p></a></div>
+                <div class="nav__itemProduct"><a href="/explore/matebook-14s/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/matebook-14s-a.png" alt="HUAWEI MateBook 14s" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI MateBook 14s</p></a></div>
+                <div class="nav__itemProduct"><a href="/explore/freebuds4/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/freebuds4-a.png" alt="HUAWEI FreeBuds 4" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI FreeBuds 4</p></a></div>
+                <div class="nav__itemProduct"><a href="/explore/watch-gt-3/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/watch-gt3-a.png" alt="HUAWEI WATCH GT 3" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">HUAWEI WATCH GT 3</p></a></div>
+
+                <div class="nav__itemProduct"><a href="/explore/" data-t-cat="Global Nav" data-t-act="Hot"><img src="https://www.huaweifans.com.tw/assets/images/common/allPost.png" alt="allPhone" class="nav__itemProductWearables">
+                    <p class="nav__itemProductPhoneName">查看所有文章</p></a></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="loading loading--active"><img src="https://www.huaweifans.com.tw/assets/images/common/logo.png" alt="HUAWEI" class="loading__img"></div>
+
+    <main>
+  <section class="temp">
+    <div class="temp__container">
+      <!-- article -->
+      <div class="content">
+        <h1 style="text-align: center;">華為有禮 花粉回娘家 月月抽活動</h1>
+        <p><img src="https://static.huaweifans.com.tw/uploads/events/member-survey-2022/member-survey-2022-banner-1800x900-v2.jpg" alt="華為有禮 花粉回娘家" /></p>
+        <p>親愛的花粉們，感謝大家對HUAWEI產品的支持。為回饋花粉，特別舉辦回娘家填問券抽好禮活動！活動期間將每月抽出幸運兒，送出華為超值好禮！</p>
+        
+        <h2>活動時間</h2>
+        <p>2022/8/10（三）－ 2022/12/31（六）</p>
+
+        <h2>活動辦法與資格</h2>
+        <p>1.活動期間內，參加花粉回娘家填問卷活動，即可獲得月月抽【獎項1】抽獎資格。</p>
+        <p>2.凡於問卷登記3款以上目前持有之華為產品，經本活動小組驗證後將有機會獲得【獎項2】抽獎資格。活動期間可持續回到活動頁新增華為產品資料。</p>
+        <p>註：參加者須上傳產品資訊照片，且照片中必須有包含S/N碼和產品型號（model name）兩個訊息。照片將由本活動小組進行資料審查，如審查後且查證為多人使用，或是非華為產品照片，將取消抽獎與獲獎資格。</p>
+
+        <h2>得獎公告與領獎辦法</h2>
+        <p>1.活動獎項將於2022年9月起，每月10號於華為粉絲團公告得獎名單，請隨時關注粉絲團公告。</p>
+        <p>立即加入 <a target="_blank" href="https://www.facebook.com/HuaweimobileTW" style="text-decoration: underline;">Huawei Mobile (TW) 粉絲團</a></p>
+        <p>2.得獎公告日起10日內，活動小組將主動聯繫得獎人。得獎人需提供問卷登記之華為產品照片、S/N或IMEI碼以利比對資料正確性。若未獲得得獎者回覆(主辦單位通知獲獎信息後 7 天內)，該得獎者即失去得獎資格。</p>
+
+        <h2>活動獎項</h2>
+        <p>抽獎公告時間<br/>2022年：9/10、10/10、11/10、12/10<br/>2023年： 1/10</p>
+        <div class="list prize">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>獎項名稱</th>
+                <th>市價</th>
+                <th>獎品名額</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr><td rowspan="5" style="white-space: nowrap;">獎項1</td><td>HUAWEI MatePad 2022 (4G+128G)</td><td>$8,990</td><td>9月~11月，每月抽出1名，共4名</td></tr>
+              <tr><td>HUAWEI GT3 Pro 運動款</td><td>$10,990</td><td>9月~12月，每月抽出1名，共5名</td></tr>
+              <tr><td>HUAWEI WATCH Fit 2 運動款(顏色隨機)</td><td>$4,990</td><td>9月~12月，每月抽出1名，共5名</td></tr>
+              <tr><td>HUAWEI Freebus Pro 2 (顏色隨機)</td><td>$5,990</td><td>9月~12月，每月抽出1名，共5名</td></tr>
+              <tr><td>HUAWEI Freebus SE (顏色隨機)</td><td>$1,490</td><td>9月~12月，每月抽出1名，共5名</td></tr>
+              <tr><td style="white-space: nowrap;">獎項2</td><td>HUAWEI 智慧辦公組 MateBook D16 12th + HUAWEI MatePad 2022</td><td>$30,990 / $8,990</td><td>12月超級花粉大獎，共1名</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2></h2>
+        <form id="entry-form">
+          <div class="temp__item">
+            <p class="temp__itemName">姓名*</p>
+            <input id="name" type="text" name="name" required maxlength="6" placeholder="請填寫真實姓名" class="temp__input" value="">
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">手機號碼*</p>
+            <input id="mobile" type="tel" name="mobile" required maxlength="10" placeholder="請填寫手機號碼 EX:0918XXXXXX" class="temp__input" value="">
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">E-mail*</p>
+            <input id="email" type="email" name="email" required maxlength="30" placeholder="請填寫E-mail" class="temp__input" value="">
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">性別*</p>
+            <select id="gender" name="gender" class="temp__select">
+              <option value="">請選擇</option>
+              <option value="m" >男</option>
+              <option value="f" >女</option>
+            </select>
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">生日*</p>
+            <input id="dob" name="dob" type="date" class="temp__input" placeholder="請輸入您的生日" value="">
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">地址*</p>
+            <div class="temp__group">
+              <div id="twzipcode"></div>
+            </div>
+            <input id="address" type="text" name="address" required maxlength="50" placeholder="請填寫居住地址" class="temp__input" value="">
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">我是花粉我驕傲！</p>
+            <p class="description">您正在使用的華為產品有哪些呢？</p>
+            <p class="description">注意：請如實填寫產品相關資料。照片中必須有包含S/N碼和產品型號（model name）兩個訊息。</p>
+            <div class="flex">
+              <div>
+                <select id="product-category-owner" data-role="product-category" data-rel="owner" class="temp__select">
+                  <option value="">請選擇產品類別</option>
+                  <option value="laptop">筆記型電腦</option>
+                  <option value="tablet">平板電腦</option>
+                  <option value="wearable">穿戴裝置</option>
+                  <option value="audio">音頻產品</option>
+                  <option value="smartphone">智慧型手機</option>
+                  <option value="mateview">MateView</option>
+                  <option value="wifi">WiFi系列</option>
+                </select>
+              </div>
+              <div class="center">
+                <select id="product-list-owner" data-role="product-list" class="temp__select">
+                  <option value="">--</option>
+                </select>
+              </div>
+              <button type="button" data-role="add-product" data-rel="owner" class="temp__sent">新增產品</button>
+            </div>
+            <div class="list">
+              <table id="product-table-owner">
+                <thead>
+                  <tr>
+                    <th class="category">類別</th>
+                    <th>產品名稱</th>
+                    <th>S/N碼或IMEI碼</th>
+                    <th>照片</th>
+                    <th>功能</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank">S/N碼圖例</a> &nbsp; &nbsp; &nbsp;
+              <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">IMEI碼圖例</a>
+            </p>
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">花粉夢想清單</p>
+            <p class="description">還想擁有更多華為產品嗎？請寫下您的夢想清單。</p>
+            <div class="flex">
+              <div>
+                <select id="product-category-wishlist" data-role="product-category" data-rel="wishlist" class="temp__select">
+                  <option value="">請選擇產品類別</option>
+                  <option value="laptop">筆記型電腦</option>
+                  <option value="tablet">平板電腦</option>
+                  <option value="wearable">穿戴裝置</option>
+                  <option value="audio">音頻產品</option>
+                  <option value="smartphone">智慧型手機</option>
+                  <option value="mateview">MateView</option>
+                  <option value="wifi">WiFi系列</option>
+                  <option value="none">無</option>
+                </select>
+              </div>
+              <div class="center">
+                <select id="product-list-wishlist" data-role="product-list" class="temp__select">
+                  <option value="">--</option>
+                </select>
+              </div>
+              <button type="button" data-role="add-product" data-rel="wishlist" class="temp__sent">新增產品</button>
+            </div>
+            <div class="list">
+              <table id="product-table-wishlist">
+                <thead>
+                  <tr>
+                    <th class="category">類別</th>
+                    <th>產品名稱</th>
+                    <th>用途</th>
+                    <th>功能</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="temp__item">
+            <p class="temp__itemName">請問您還有使用過華為哪些服務？</p>
+            <div>
+              <input id="has_huawei_id" type="checkbox" value="y"  />
+              <label for="has_huawei_id" class="temp__label">
+                <div class="temp__square"></div>
+                <p>註冊華為ID</p>
+              </label>
+            </div>
+            <div>
+              <input id="has_huawei_cloud" type="checkbox" value="y"  />
+              <label for="has_huawei_cloud" class="temp__label">
+                <div class="temp__square"></div>
+                <p>華為雲服務</p>
+              </label>
+            </div>
+            <div>
+              <input id="has_app_gallery" type="checkbox" value="y"  />
+              <label for="has_app_gallery" class="temp__label">
+                <div class="temp__square"></div>
+                <p>AppGallery</p>
+              </label>
+            </div>
+          </div>
+          <div class="temp__item temp__check">
+            <input id="agree" type="checkbox" value="y" />
+            <label for="agree" class="temp__label">
+              <div class="temp__square"></div>
+              <p class="temp__note">本人已詳閱並完全了解及同意有關本次<a style="text-decoration: underline;" href="#privacy">活動個資蒐集利用之聲明</a>，本人並同意主辦單位得將所蒐集之個人資料依本聲明之規定進行後續所需之利用與處理。</p>
+            </label>
+          </div>
+          <div class="temp__sentBox">
+            <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
+          </div>
+        </form>
+      </div>
+      <!-- /article -->
+    </div>
+  </section>
+  <section class="temp">
+    <div class="temp__container">
+      <h1>注意事項</h1>
+        <div class="temp__text">
+          <p>1. 得獎人同意得獎相關個人資料由本公司於本活動特定目的範圍進行蒐集、處理及利用，得獎人並授權本公司公開公佈姓名，並不做其他用途。個人資料類別包含姓名、電話及本活動所需個人資料，該個人資料利用的期間、地區、對象及方式依本活動辦法及個資法辦理。如不提供正確且真實的個人資料將導致喪失參與本活動資格。</p>
+          <p>2. 若得獎人不符合、不同意或違反本活動規定者，主辦單位有權逕行取消中獎資格及參與本活動的權利，並對該行為保留法律追訴權。</p>
+          <p>3. 奬項於寄送過程中，若發生任何毁壞、延遲或遺失時，經確認非主辦單位委託之活動小組造成疏失，主辦單位恕不負責。</p>
+          <p>4. 中獎者若未滿20歲，須獲得法定監護人同意及代為領取。依中華民國所得稅法規定，凡中獎價值超過新台幣1,000元者，獎項將須列入個人年度綜合所得稅申報(稅額以獎品市價計算)。中獎價值超過新台幣20,000元者，須繳納10%稅金(稅額以獎品市價計算)，全網行銷股份有限公司依法代收中獎稅金，若中獎人未能如期依法繳納應繳稅額，即視為放棄得獎資格。</p>
+          <p>5. 主辦單位保留最終解釋、變更、修改之權利，若中獎人因資格不符或其他因素失去中獎資格，恕不另行通知。</p>
+          <p>6. 具有得獎資格之中獎人需為真實身分，活動應由本人親自參與，不得由他人代為參加，若使用者以人頭帳號或電腦駭客程式等其他影響活動公平性之行為參與活動，經主辦單位發現或經第三人檢舉，則主辦單位有權取消使用者之參與、得獎資格，主辦單位不另行通知，並保留法律追訴權。</p>
+          <p>7. 訊崴技術有限公司（以下簡稱”主辦單位”）保留修改活動辦法之權利及最終解釋權，如本活動因故無法執行時，主辦單位有權決定取消或暫停本活動。前述變更、修改、取消或暫停，主辦單位無須另行通知，依活動網頁公告訊息為準。</p>
+          <p>8. 如對本活動辦法有任何疑問，請洽免費客戶服務專線：0800-888-575（服務時間：每天09:00-18:00）</p>
+          <p>9. 得獎獎品，不得折換現金。如遇產品缺貨或不可抗力之事由導致獎品內容變更，主辦單位有權變更贈品，改由等值商品取代之，得獎者不得要求折現或轉換其他商品。且主辦單位不負贈品之任何維護或保固責任。</p>
+        </div>
+    </div>
+  </section>
+  <section class="temp" id="privacy">
+    <div class="temp__container">
+      <h1>個資法聲明</h1>
+      <div class="temp__text">
+        <p>1. 參加者同意訊崴技術有限公司(以下簡稱”主辦單位”)蒐集參加者之個人資料（包括姓名、手機門號、收件地址、E-mail），作為本次活動之活動聯繫、活動公告、後續處理、聯絡及紀錄等行銷目的使用之用途，並同意主辦單位及相關企業、服務供應商得為推銷產品、市場調查、客戶服務、資料儲存與整理等用途蒐集、處理及利用您的個人資料。</p>
+        <p>2. 主辦單位將妥為保存所蒐集之個人資料，並於各自之存續期間內依個人資料保護法及相關法令於上述活動以及行銷之目的內，於台灣地區使用。主辦單位為達成前開所述目的得將所蒐集之參加者個人資料傳遞給為主辦單位進行資料維護、處理及寄送之服務供應商。</p>
+        <p>3. 依個人資料保護法之規定，參加者可隨時向主辦單位要求查詢、請求給予複本、請求補充或更正、請求停止處理、利用或刪除您的個人資料。個資保存期間：訊崴存續期間、或依法令、或訊崴所訂之資料保存期間、個人資料蒐集之特定目的存續期間、契約約定之保存年限、或因執行業務所必須之保存期間。若有個人資料權益相關問題，請洽免費客服專線：0800-888-575 （服務時間：每天09:00-18:00）收到參加者的要求後，主辦單位將在相關法令許可之範圍及合理期間內依參加者的要求進行處理。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+     <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <div class="footer__bread">
+            <ul>
+              <li class="footer__li">
+                <a href="/" data-t-cat="Breadcrumb" data-t-act="Main">首頁</a>
+              </li>
+                <li class="footer__li"><a href="/events/">活動專區</a></li>
+  <li class="footer__li">華為有禮 頭號花粉大調查</li>
+            </ul>
+          </div>
+          <div class="footer__list">
+            <div class="footer__item">
+              <h3 class="footer__itemName">產品</h3>
+              <div class="footer__itemSlide">
+                <a href="/peripherals/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">華為智慧辦公</a>
+                <a href="/phones/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">智慧手機</a>
+                <a href="/laptops/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">筆記型電腦</a>
+                <a href="/audio/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">音頻產品</a>
+                <a href="/wearables/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">穿戴裝置</a>
+                <a href="/peripherals/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">更多產品</a>
+              </div>
+            </div>
+            <div class="footer__item">
+              <h3 class="footer__itemName">活動專區</h3>
+              <div class="footer__itemSlide">
+                <a href="/events/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">所有活動</a>
+              </div>
+            </div>
+             <div class="footer__item">
+                <h3 class="footer__itemName">新知探索</h3>
+                <div class="footer__itemSlide">
+                  <a href="/explore/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">全部文章</a>
+                  <a href="/explore/matebook-x-pro-2020/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">MateBook X Pro 2020</a>
+                  <a href="/explore/watch-fit/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">WATCH FIT</a>
+                  <a href="/explore/watch-gt2-pro/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">WATCH GT 2 Pro</a>
+                  <a href="/explore/freebuds-pro/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">FreeBuds Pro</a>
+                  <a href="/nextimage2019/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">華為新影像大賽</a></div>
+            </div>
+            <div class="footer__item">
+              <h3 class="footer__itemName">品牌店與服務中心</h3>
+              <div class="footer__itemSlide">
+                <a href="/stores/where-to-buy/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">體驗店</a>
+                <a href="/stores/experience/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">華為專櫃</a>
+                <a href="/service-centers/" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">全台服務中心</a>
+              </div>
+            </div>
+            <div class="footer__item">
+              <h3 class="footer__itemName">購買華為產品</h3>
+              <div class="footer__itemSlide">
+                <a href="https://24h.pchome.com.tw/region/DYAK" target="_blank" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">PChome24小時購物</a>
+                <a href="https://www.momoshop.com.tw/category/LgrpCategory.jsp?l_code=2147900000&mdiv=1099700000-bt_0_997_11-bt_0_997_11_P7_3_e16&ctype=B&memid=6000006902&cid=apuad&oid=1&osm=league" target="_blank" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">momo購物網</a>
+                <a href="https://tw.buy.yahoo.com/?sub=803" target="_blank" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">Yahoo!購物中心</a>
+                <a href="https://shopee.tw/huawei.tw" target="_blank" class="footer__itemLink" data-t-cat="Global Nav" data-t-act="Footer">蝦皮購物</a>
+              </div>
+            </div>
+            <div class="footer__item">
+              <h3 class="footer__itemName">關注我們</h3>
+              <div class="footer__itemSlide">
+                <a href="https://www.facebook.com/HuaweimobileTW/" target="_blank" class="footer__itemLink footer-svg" data-t-cat="Global Nav" data-t-act="Footer">
+                  <img src="https://www.huaweifans.com.tw/assets/images/common/footer-fb.svg" alt="footer-fb"></a>
+                <a href="http://line.me/ti/p/@huaweitw" target="_blank" class="footer__itemLink footer-svg" data-t-cat="Global Nav" data-t-act="Footer">
+                  <img src="https://www.huaweifans.com.tw/assets/images/common/footer-line.svg" alt="footer-line"></a>
+                <a href="https://www.instagram.com/huaweimobiletw/?hl=zh-tw" target="_blank" class="footer__itemLink footer-svg" data-t-cat="Global Nav" data-t-act="Footer">
+                  <img src="https://www.huaweifans.com.tw/assets/images/common/footer-ig.svg" alt="footer-ig"></a>
+                </div>
+          </div>
+            <img src="https://www.huaweifans.com.tw/assets/images/common/footerLogo.svg" alt="" class="footer__logo">
+          </div>
+        </div>
+      </div>
+      <div class="footer__protection">
+        <div class="footer__container">
+          <div class="footer__bread">
+            <ul>
+              <li class="footer__li"><a href="/about-us/" data-t-cat="Global Nav" data-t-act="Footer">關於華為</a></li>
+              <li class="footer__li"><a href="/legal/terms-of-use/" data-t-cat="Global Nav" data-t-act="Footer">法律聲明</a></li>
+              <li class="footer__li"><a href="/legal/privacy/policy/" data-t-cat="Global Nav" data-t-act="Footer">隱私聲明</a></li>
+              <li class="footer__li"><a href="/legal/cookies/" data-t-cat="Global Nav" data-t-act="Footer">cookie</a></li>
+              <li class="footer__li"><a href="/support/warranty/" data-t-cat="Global Nav" data-t-act="Footer">保固政策</a></li>
+              <li class="footer__li"><a href="/news/" data-t-cat="Global Nav" data-t-act="Footer">最新消息</a></li>
+            </ul>
+            <p class="footer__copy">©2022 訊崴技術有限公司 保留一切權利</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  <script src="https://www.huaweifans.com.tw/assets/scripts/lib/jquery.min.js"></script>
+  <script src="https://www.huaweifans.com.tw/assets/scripts/lib/TweenMax.min.js"></script>
+  <script src="https://www.huaweifans.com.tw/assets/scripts/lib/device.min.js"></script>
+  <script src="https://www.huaweifans.com.tw/assets/scripts/lib/js-cookie-2.2.1.min.js"></script>
+  <script src="https://www.huaweifans.com.tw/assets/scripts/app.js?v=20200921"></script>
+  <script src="https://www.huaweifans.com.tw/assets/scripts/common.js?v=20200323"></script>
+  <script src="https://www.huaweifans.com.tw/assets/scripts/tracking.js?v=20200324"></script>
+  <script>
+    var _viewData = {"user":null,"products":[],"has_huawei_id":"n","has_huawei_cloud":"n","has_app_gallery":"n"};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://www.huaweifans.com.tw/assets/scripts/lib/jquery.twzipcode.min.js"></script>
+<script src="./member-survey-2022.js"></script>
+<script>
+    $(function () {
+        if($('body').innerHeight() < $(window).innerHeight()){
+          var lostHeight = $('main').height() + ($(window).innerHeight() - $('body').innerHeight())
+          $('main').css('height', lostHeight)
+        }
+    });
+</script>
+</body>
+</html>
