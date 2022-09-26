@@ -1,0 +1,335 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;	
+	font-family: 'Roboto','微軟正黑體', Helvetica, Arial, sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+	margin-bottom: 0;;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+.hide{
+	display:none ! important;
+}
+
+
+.inner{
+	width:100%;
+	h3{
+		font-size: 35px;
+		color: #005a5a;
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-bottom: 40px;
+	}
+}
+
+
+
+
+/* The container must be positioned relative: */
+.custom-select {
+	position: relative;
+	font-family: Arial;
+  }
+  
+  .custom-select select {
+	display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+	background-color: #fff;
+	border-radius: 8px;
+	color: #b4b4b4;
+	&.select-arrow-active{
+		border-radius: 0px;
+		color:#3d3d3d;;
+	}
+  }
+
+  .select_changed .select-selected{
+	color:  #3d3d3d;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+	position: absolute;
+    content: "";
+    top: 9px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    background-image: url(../images/slk_down.svg);
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 9px;
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+	font-size: 20px;
+    text-align: center;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+	cursor: pointer;
+  }
+
+  .select-selected.select-arrow-active,
+  .select-selected.select-arrow-active ~ .select-items > div{
+	border-color: transparent transparent #048080 transparent;
+  }
+
+
+  
+  /* Style items (options): */
+  .select-items {
+	position: absolute;
+	background-color: #fff;
+	
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+	display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+	background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+  .select-selected.select-arrow-active{
+	  border-top-left-radius:8px;
+	  border-top-right-radius:8px;
+	  border-top:2px solid #359b9b;
+	  border-left:2px solid #359b9b;
+	  border-right:2px solid #359b9b;
+  }
+
+  .select-items{
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+	border-left:2px solid #359b9b;
+	border-right:2px solid #359b9b;
+	border-bottom:2px solid #359b9b;
+  }
+  .select-items div:last-child{
+	  border-bottom: 0px;;
+  }
+
+
+  #preview{
+    position:absolute;
+   border:2px solid #048080;
+    background:#fff;
+    padding:15px;
+	border-radius: 15px;;
+    display:none;
+    color:#fff;
+	margin-top: 30px !important;
+	margin-left: -230px;;
+	width: 250px;;
+	min-height:250px;
+	
+
+	img{
+		width:100%;
+	}
+  }
+
+.upload_action{
+	height:0;
+	width: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+
+
+
+
+
+/*  Custom Radio */
+
+.rdcontainer {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .rdcontainer input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .rdcontainer .checkmark {
+	position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #048080;
+    border-radius: 50px;;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .rdcontainer:hover input ~ .checkmark {
+	background-color: #fff;
+	border:2px solid #048080;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .rdcontainer input:checked ~ .checkmark {
+	
+	background:#fff;
+	border:2px solid #048080;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .rdcontainer .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  .rdcontainer  .outter{
+	top: 1px;
+    position: absolute;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+	transition: 0.3s;
+	&:hover{
+		background: #d2e0e4;
+	}
+	&:active{
+		background: #a7cdd0;
+	}
+  }
+
+
+  /* Show the indicator (dot/circle) when checked */
+  .rdcontainer input:checked ~ .outter .checkmark:after {
+	display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .rdcontainer .checkmark:after {
+    top: 4px;
+    left: 4px;
+	  width: 12px;
+	  height: 12px;
+	  border-radius: 50%;
+	  background: #048080;
+  }
+
+
+
+  /*   datepicker  */ 
+
+
+  .daterangepicker.show-calendar{
+	border:2px solid #048080;
+	border-radius: 11px;;
+  }
+
+  .daterangepicker:after{
+	top:-5px;
+  }
+
+  .daterangepicker:before {
+    top: -7px;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+}
+
+
+  .daterangepicker:before{
+	top: -8px;
+	border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+	border-bottom: 7px solid #048080;
+  }
+
+  .daterangepicker td.active{
+	// border-radius: 50%;;
+  }
+
+  .container-fluid{
+	overflow-x: hidden;
+	padding-left:0 ! important;
+	padding-right:0 ! important;
+  }
+  .mpc-row{
+	overflow-x: hidden;
+  }

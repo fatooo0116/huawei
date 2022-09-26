@@ -1,0 +1,280 @@
+#app{
+    #page-topbar{
+        
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height:100px;
+        z-index: 3;
+        background-color:#138b8b;
+        -webkit-transition: all .1s ease-out;
+        transition: all .1s ease-out;
+
+        a{
+            text-decoration: none;;
+        }
+
+        .logo{
+            color: #fff;
+            margin: auto;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            letter-spacing: 2px;;            
+        }
+
+
+        nav{
+            float: right;
+            margin-right:35px;
+            ul{
+                display: flex;
+                height: 100px;
+                align-items: center;
+                
+                li{
+                    a{
+                        
+                        color: #fff;
+                        &.user_name{
+                            font-size:18px;
+                            letter-spacing: 3px;;
+                            .name{
+                                letter-spacing: 0px;;
+                                margin-left:30px;
+                            }
+                        }
+                        &.logout{
+                            font-size:12px;
+                            margin-left:42px;
+                            display: block;   
+                            text-align: center;                      
+                            img{                                
+                                width:20px;
+                                display:block;
+                                margin: 0 auto 5px;;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    .app-menu{
+        position: fixed;;
+        margin-top:100px;
+        width: 120px;
+        height:100vh;
+        background:#005a5a;
+        color:#fff;
+
+        a{
+            text-decoration: none;
+        }
+
+        nav{
+            ul{
+                li{
+                    display: flex;
+                    margin-top:11px;
+                    margin-left:auto;
+                    margin-right:auto;
+                    justify-content: center;
+                    &:first-child{
+                        margin-top:19px;
+                    }
+                    a{
+
+                        &:hover{
+                            background: #308d8c;
+                            border-radius: 5px;
+                        }
+
+                        &.active{
+                            background: #308d8c;
+                            border-radius: 5px;
+                        }
+
+                        img{
+                            display: block;
+                            margin:0 auto 10px;
+                            max-width: 39px;;
+                        }
+                        width: 100px;
+                        height: 100px;
+                        display: flex;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 13px;
+                        text-align: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        justify-content: center;
+                        span{
+                            display: block;
+                            width: 100%;;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+#aloha_sub_header{
+    width:100%;
+    height: 538px;
+
+
+    .cg-hero-bg {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #777;
+        background-size: cover;
+        background-position: center center;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000;
+        z-index: -1;
+    }
+    .overlay {
+        opacity: 0.10;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: #000;
+    }
+
+    .container {
+        height: 100%;
+        display: box;
+        display: flex;
+        box-pack: start;
+        justify-content: flex-start;
+        box-align: end;
+        align-items: flex-end;
+        > .row{
+            width:100%;
+        }
+
+        .entry-header {
+            background-color: rgba(79,115,123,0.85);
+            flex: 1;
+            max-width: calc(75% - 48px);
+            padding: 37px 37px 32px 37px;
+        }
+    }
+}
+
+.header-wrapper p.sub-title,
+.header-wrapper p.sub-title a{
+    color:#ffffff;
+}
+.header-wrapper p.sub-title {
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+}
+
+
+.cg-page-title.entry-title {
+    font-weight: 600;
+    margin: 0px;
+    position: relative;
+    z-index: 3;
+    line-height: 58px;
+    letter-spacing: 0px;
+   
+   
+    color: #ffffff;
+    font-size: 48px;
+    a{
+        color: #ffffff;
+    }
+}
+
+.container{
+    overflow-x: hidden;
+}
+
+#breadcrumbs{
+    a{
+        color:#fff;
+        &:after {
+            content: "\f125";
+            font-family: 'Ionicons';
+            font-style: normal;
+            margin-left: 11px;
+            font-size: 9px;
+            position: relative;
+            top: -2px;
+            margin-right: 9px;
+        }
+    }
+    span{
+        color:#fff;
+    }
+}
+
+
+@media (max-width: 991px) {
+    #aloha_sub_header .container .entry-header{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #aloha_sub_header{
+        height: 300px;
+    }
+    #aloha_sub_header .container{
+        padding:0;
+        .col-xs-12{
+            padding:0;
+        }
+    }
+    #aloha_sub_header .container > .row{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 376px){
+    #aloha_sub_header{
+        height: 300px;
+    }
+    #aloha_sub_header .container .entry-header{
+        padding:10px;
+    }
+    #aloha_sub_header  .cg-page-title.entry-title{
+        font-size: 24px!important;
+        line-height: 34px!important;
+    }
+}
