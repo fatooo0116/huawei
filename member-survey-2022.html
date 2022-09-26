@@ -10,6 +10,9 @@
   <title>華為有禮 花粉回娘家 月月抽活動 | 活動專區 | 華為台灣活動網站</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
   <link rel="stylesheet" href="https://www.huaweifans.com.tw/assets/styles/events-register.css?v=20200401">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
   <style>
     button:disabled,
     button.disabled { opacity: 0.5; }
@@ -378,32 +381,39 @@
 
 
 
-          <div class="temp__sentBox">
-            <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
-          </div>
-
-        
-
 
           <div class="temp__item">
-            <p class="temp__itemName">我是花粉我驕傲！</p>
-            <p class="description">您正在使用的華為產品有哪些呢？</p>
+            <p class="temp__itemName">任務1：註冊華為ID</p>
+            <p class="description">上傳華為ID截圖就可完成此項任務。</p>
             <div class="list">
             <table id="product-table-wishlist">
               <thead>
                 <tr>
-                  <th class="category">類別</th>
-                  <th>產品名稱</th>
-                  <th>用途</th>
+                  <th class="category">完成狀態</th>
+                  <th>輸入華為ID</th>
+                  <th>上傳ID截圖(筆電/平板/手機)</th>
                   <th>功能</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
+                  <td>
+                    <div class="upload_check temp__check">
+                      <input id="upload1" type="checkbox" value="y">
+                      <label for="upload1" class="temp__label">
+                        <div class="temp__square  temp_circle"></div>                        
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                      <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value="">
+                  </td>
+                  <td>
+                    <button type="button"  class="temp__sent submit-btn">上傳</button>
+                  </td>
+                  <td>
+                    <button type="button"  class="temp__sent submit-btn">刪除</button>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -415,7 +425,7 @@
         </div>
 
 
-        <div class="temp__sentBox">
+        <div class="temp__sentBox2">
           <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
         </div>
 
@@ -424,15 +434,15 @@
 
 
         <div class="temp__item">
-          <p class="temp__itemName">我是花粉我驕傲！</p>
-          <p class="description">您正在使用的華為產品有哪些呢？</p>
+          <p class="temp__itemName">任務2：使用50GB以上華為雲空間</p>
+          <p class="description">上傳50GB的空間截圖，即可完成次任務。</p>
           <div class="list">
           <table id="product-table-wishlist">
             <thead>
               <tr>
-                <th class="category">類別</th>
-                <th>產品名稱</th>
-                <th>用途</th>
+                <th class="category">完成狀態</th>
+                <th>輸入你的雲空間總GB數</th>
+                <th>上傳你的雲空間總GB圖</th>
                 <th>功能</th>
               </tr>
             </thead>
@@ -454,7 +464,7 @@
 
 
 
-      <div class="temp__sentBox">
+      <div class="temp__sentBox2">
         <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
       </div>
 
@@ -462,15 +472,15 @@
 
 
       <div class="temp__item">
-        <p class="temp__itemName">我是花粉我驕傲！</p>
-        <p class="description">您正在使用的華為產品有哪些呢？</p>
+        <p class="temp__itemName">任務３：參加筆電健檢活動</p>
+        <p class="description">上傳筆電健檢問卷調查表，第三頁截圖即可完成任務。</p>
         <div class="list">
         <table id="product-table-wishlist">
           <thead>
             <tr>
-              <th class="category">類別</th>
-              <th>產品名稱</th>
-              <th>用途</th>
+              <th class="category">完成狀態</th>
+              <th>輸入筆電健檢日期</th>
+              <th>上傳筆電健檢問券調查表</th>
               <th>功能</th>
             </tr>
           </thead>
@@ -491,22 +501,22 @@
     </div>
 
 
-    <div class="temp__sentBox">
+    <div class="temp__sentBox2">
       <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
     </div>
 
 
 
     <div class="temp__item">
-      <p class="temp__itemName">我是花粉我驕傲！</p>
-      <p class="description">您正在使用的華為產品有哪些呢？</p>
+      <p class="temp__itemName">任務4：筆電升級超級終端 ( HUAWEI PC Manager )</p>
+      <p class="description">已經成功升級了嗎?立即寫下筆電本號，即可完成任務。</p>
       <div class="list">
       <table id="product-table-wishlist">
         <thead>
           <tr>
-            <th class="category">類別</th>
-            <th>產品名稱</th>
-            <th>用途</th>
+            <th class="category">完成狀態</th>
+            <th>輸入你的華為筆電版本號</th>
+            <th>上傳華為ID截圖(筆電/平板/手機)</th>
             <th>功能</th>
           </tr>
         </thead>
