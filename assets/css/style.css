@@ -27,4 +27,203 @@
   background: none;
   border: 0px; }
 
+/*  popup */
+.msg h3 {
+  margin-bottom: 20px;
+  font-size: 20px; }
+.msg a {
+  display: block;
+  text-align: center;
+  border: 1px solid #3E3E3E;
+  color: #3E3E3E;
+  width: 160px;
+  height: 46px;
+  display: inline-block;
+  margin: auto;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/*  award */
+#award_outter {
+  max-width: 1400px;
+  width: 100%;
+  background: none; }
+  #award_outter #award {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #award_outter #award .left {
+      width: 40%;
+      margin-right: 10px; }
+      #award_outter #award .left img {
+        display: block;
+        width: 100%; }
+    #award_outter #award #award_box {
+      width: 60%;
+      max-width: 600px;
+      height: 500px;
+      background-image: url("../img/bk.png");
+      background-size: cover;
+      display: flex;
+      padding: 14px 16px;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      #award_outter #award #award_box .cbox {
+        width: 183px;
+        height: 150px;
+        background: #fff;
+        background-image: url("../img/award.png");
+        background-size: 600px auto;
+        background-repeat: no-repeat;
+        position: relative; }
+        #award_outter #award #award_box .cbox:before {
+          content: '';
+          box-sizing: border-box;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border: 6px solid #d33177;
+          opacity: 0; }
+        #award_outter #award #award_box .cbox.active:before {
+          opacity: 1; }
+      #award_outter #award #award_box #cbox1 {
+        background-position: -15px -12px; }
+      #award_outter #award #award_box #cbox2 {
+        background-position: -210px -12px; }
+      #award_outter #award #award_box #cbox3 {
+        background-position: -400px -12px; }
+      #award_outter #award #award_box #cbox4 {
+        background-position: -15px -175px; }
+      #award_outter #award #award_box #cbox5btn {
+        background-image: url(../img/btn.svg);
+        background-color: transparent;
+        background-size: auto 100%;
+        background-position: center;
+        cursor: pointer;
+        transform: scale(0.98);
+        transition: 0.3s; }
+        #award_outter #award #award_box #cbox5btn:hover {
+          transform: scale(1); }
+        #award_outter #award #award_box #cbox5btn:active {
+          transform: scale(0.95); }
+      #award_outter #award #award_box #cbox5 {
+        background-position: -400px -175px; }
+      #award_outter #award #award_box #cbox6 {
+        background-position: -15px -335px; }
+      #award_outter #award #award_box #cbox7 {
+        background-position: -210px -335px; }
+      #award_outter #award #award_box #cbox8 {
+        background-position: -400px -335px; }
+
+.rotate {
+  animation: rotation 2s infinite linear; }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+#award_info {
+  width: 100%; }
+  #award_info .top img {
+    display: block;
+    max-width: 550px;
+    width: 100%;
+    margin: auto auto 10px; }
+  #award_info .bottom img {
+    max-width: 550px;
+    width: 100%;
+    margin: auto auto 10px; }
+  #award_info .action img {
+    max-width: 255px;
+    width: 100%;
+    display: block;
+    margin: auto auto auto; }
+
+@media (max-width: 1100px) {
+  .fancybox-content {
+    padding: 20px; }
+
+  #award {
+    flex-wrap: wrap; }
+
+  #award_outter #award .left {
+    max-width: 90%; }
+
+  #award_outter #award .left,
+  #award_outter #award #award_box {
+    width: 100%; } }
+@media (max-width: 768px) {
+  #award_outter #award #award_box {
+    width: 100%;
+    height: auto; }
+
+  #award_outter #award #award_box .cbox {
+    width: calc(33% - 10px);
+    height: 130px;
+    margin-bottom: 14px; }
+
+  #award_outter #award #award_box .cbox {
+    background-size: 500px auto; }
+
+  #award_outter #award #award_box #cbox2 {
+    background-position: -175px -12px; }
+  #award_outter #award #award_box #cbox3 {
+    background-position: -340px -12px; }
+  #award_outter #award #award_box #cbox4 {
+    background-position: -15px -145px; }
+  #award_outter #award #award_box #cbox5 {
+    background-position: -340px -145px; }
+  #award_outter #award #award_box #cbox6 {
+    background-position: -15px -280px; }
+  #award_outter #award #award_box #cbox7 {
+    background-position: -175px -280px; }
+  #award_outter #award #award_box #cbox8 {
+    background-position: -340px -280px; } }
+@media (max-width: 450px) {
+  #award_outter {
+    padding: 0 10px; }
+
+  #award_outter #award #award_box {
+    width: 100%;
+    padding: 8px 8px 0px 8px;
+    height: auto; }
+
+  #award_outter #award #award_box .cbox {
+    width: calc(33% - 10px);
+    height: 100px;
+    margin-bottom: 14px; }
+
+  #award_outter #award #award_box .cbox {
+    background-size: 400px auto; }
+
+  #award_outter #award #award_box #cbox1 {
+    background-position: -10px -10px; }
+  #award_outter #award #award_box #cbox2 {
+    background-position: -140px -10px; }
+  #award_outter #award #award_box #cbox3 {
+    background-position: -268px -10px; }
+  #award_outter #award #award_box #cbox4 {
+    background-position: -15px -115px; }
+  #award_outter #award #award_box #cbox5 {
+    background-position: -268px -115px; }
+  #award_outter #award #award_box #cbox6 {
+    background-position: -15px -223px; }
+  #award_outter #award #award_box #cbox7 {
+    background-position: -140px -223px; }
+  #award_outter #award #award_box #cbox8 {
+    background-position: -268px -223px; } }
+
 /*# sourceMappingURL=style.css.map */

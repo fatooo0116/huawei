@@ -73,8 +73,15 @@ $(function (){
     }
 
 
+
+  function fancyAlert3(content) {
+      $.fancybox.open('<div id="award_outter" class="fancyalert-content">' + content + "</div>");
+  }
+
+
+
   function fancyAlert2(content) {
-      $.fancybox.open('<div class="fancyalert-content">2222' + content + "</div>");
+      $.fancybox.open('<div class="fancyalert-content">' + content + "</div>");
   }
 
 
@@ -357,23 +364,110 @@ $(function (){
 
 
       /**  =====================================================================  */
+
+
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+
       $("#mission1_send .upload_chk").on('click',function(){
 
-        let content = '<div class="msg"><h3>再完成一個任務即可抽購物金</h3><a href="#">繼續參與任務</a></div>';
+        let content = '<div class="msg"><h3>再完成一個任務即可抽購物金</h3><a href="#" class="exit_btn ">繼續參與任務</a></div>';
          fancyAlert(content);        
+
+         $(".exit_btn").on('click',function(e){
+            e.preventDefault();
+            $.fancybox.close();
+         });
       });    
 
 
       
       $("#mission2_send .upload_chk").on('click',function(){
 
-        let content = '<div id="award"> <div class="left"><img src="assets/img/title.png"></div>'; 
-            content += '<div id="award_box"><div class="cbox"></div></div>';
+        let content = '<div id="award">'; 
+            content += '<div class="left"><img src="assets/img/title.png"></div>'; 
+            content += '<div id="award_box"><div  id="cbox1" class="cbox active"></div><div id="cbox2" class="cbox"></div><div id="cbox3" class="cbox"></div><div id="cbox4" class="cbox"></div><div id="cbox5btn" class="cbox"></div><div id="cbox5" class="cbox"></div><div id="cbox6" class="cbox"></div><div id="cbox7" class="cbox"></div><div id="cbox8" class="cbox"></div></div>';
             content += '</div>';
 
-       fancyAlert2(content);
-      console.log("==>");
-    });    
+          fancyAlert3(content);
+          console.log("==>3");
+          
+
+
+
+
+          setTimeout(function(){
+            $("#cbox5btn").on('click',function(){
+
+             // getRandomInt(3)
+             
+
+
+              for(i=0;i<45;i++){
+                let idx = getRandomInt(9);
+               
+               // console.log(idx);
+                let ipt = i;
+
+                setTimeout(function(){
+                  $("#award_box .cbox").removeClass('active');
+
+                  // console.log(i);
+                  $("#cbox"+idx).addClass('active');
+                  /*
+                  if(ipt<16){
+                    let ipx = i%8;
+                    ipx +=1;
+                    console.log(ipx);
+                    $("#cbox"+ipx).addClass('active');
+                  }else{
+                    $("#cbox"+idx).addClass('active');
+                  }
+                  */
+                  
+                  if(ipt==44){
+
+                    $("#award_box > div").fadeOut('500',function(){
+                      let result = '<div id="award_info"><div class="top"><img src="assets/img/award_top.png"></div><div class="bottom"><img src="assets/img/award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
+    
+                      $("#award_box").html(result );
+    
+                      $(".exit_btn").on('click',function(e){
+                        e.preventDefault();
+                        $.fancybox.close();
+                      });
+                    });
+
+                  }
+                                    
+                },50*i);
+              }
+
+
+
+
+              /*
+                $("#award_box > div").fadeOut('500',function(){
+                  let result = '<div id="award_info"><div class="top"><img src="assets/img/award_top.png"></div><div class="bottom"><img src="assets/img/award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
+
+                  $("#award_box").html(result );
+
+                  $(".exit_btn").on('click',function(e){
+                    e.preventDefault();
+                    $.fancybox.close();
+                  });
+                });
+                */
+               // let result = '<div><h4>zczx</h4></div>';
+           
+            });
+            
+          },500);
+      });    
+
+
 
 
 
