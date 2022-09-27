@@ -72,6 +72,13 @@ $(function (){
       }
     }
 
+
+  function fancyAlert2(content) {
+      $.fancybox.open('<div class="fancyalert-content">2222' + content + "</div>");
+  }
+
+
+
     function fancyAlert(content) {
         $.fancybox.open('<div class="fancyalert-content">' + content + "</div>");
     }
@@ -342,6 +349,53 @@ $(function (){
       addProduct(rel, product);
     });
 
+
+
+
+
+
+
+
+      /**  =====================================================================  */
+      $("#mission1_send .upload_chk").on('click',function(){
+
+        let content = '<div class="msg"><h3>再完成一個任務即可抽購物金</h3><a href="#">繼續參與任務</a></div>';
+         fancyAlert(content);        
+      });    
+
+
+      
+      $("#mission2_send .upload_chk").on('click',function(){
+
+        let content = '<div id="award"> <div class="left"><img src="assets/img/title.png"></div>'; 
+            content += '<div id="award_box"><div class="cbox"></div></div>';
+            content += '</div>';
+
+       fancyAlert2(content);
+      console.log("==>");
+    });    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Form processing
     var sending = false;
     $('#submit-button').on('click', function(e) {
@@ -443,6 +497,18 @@ $(function (){
           $("#agree").focus();
           return;
       }
+
+
+
+      
+
+      
+
+
+
+
+
+
 
       // Send data
       var $btn = $(this);

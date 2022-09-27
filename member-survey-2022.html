@@ -382,7 +382,7 @@
 
 
 
-          <div class="temp__item">
+          <div  id="mission1" class="temp__item">
             <p class="temp__itemName">任務1：註冊華為ID</p>
             <p class="description">上傳華為ID截圖就可完成此項任務。</p>
             <div class="list">
@@ -398,42 +398,37 @@
               <tbody>
                 <tr>
                   <td>
-                    <div class="upload_check temp__check">
-                      <input id="upload1" type="checkbox" value="y">
-                      <label for="upload1" class="temp__label">
-                        <div class="temp__square  temp_circle"></div>                        
-                      </label>
-                    </div>
+                    <div   class="upload_check done"></div>
                   </td>
                   <td>
-                      <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value="">
+                      <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value=""  placeholder="請輸入國碼＋手機號碼" >
                   </td>
                   <td>
-                    <button type="button"  class="temp__sent submit-btn">上傳</button>
+                    <button type="button"  class="temp__sent upload_action">上傳</button>
                   </td>
                   <td>
-                    <button type="button"  class="temp__sent submit-btn">刪除</button>
+                    <button type="button"  class="temp__sent upload_del">刪除</button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p>
-            <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank">S/N碼圖例</a> &nbsp; &nbsp; &nbsp;
-            <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">IMEI碼圖例</a>
+            <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank">PC示意圖</a> &nbsp; &nbsp; &nbsp;
+            <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">手機示意圖</a>
           </p>
         </div>
 
 
-        <div class="temp__sentBox2">
-          <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
+        <div id="mission1_send" class="temp__sentBox2">
+          <button type="button"  class="temp__sent upload_chk">確認送出</button>
         </div>
 
 
 
 
 
-        <div class="temp__item">
+        <div  id="mission2"  class="temp__item">
           <p class="temp__itemName">任務2：使用50GB以上華為雲空間</p>
           <p class="description">上傳50GB的空間截圖，即可完成次任務。</p>
           <div class="list">
@@ -448,30 +443,40 @@
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
+                <td><div class="upload_check done"></div></td>
+                <td><input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value=""  placeholder="50 GB以下不符合任務標準" ></td>
+                <td>
+                  <button type="button"  class="temp__sent upload_action">上傳</button>
+                </td>
+                <td>
+                  <button type="button"  class="temp__sent upload_del">刪除</button>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="#">GB示意圖</a></td>
+                <td colspan="2"><a href="#">若未達50GB，可立即使用<br/>
+                  華為平板或手機開通50GB雲空間(12月底前免費)
+                  </a></td>
+                <td> <button type="button"  class="temp__sent submit-btn">立即申請</button></td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank">S/N碼圖例</a> &nbsp; &nbsp; &nbsp;
-          <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">IMEI碼圖例</a>
+          <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank"> &nbsp;</a> &nbsp; &nbsp; &nbsp;
         </p>
       </div>
 
 
 
-      <div class="temp__sentBox2">
-        <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
+      <div  id="mission2_send"   class="temp__sentBox2">
+        <button type="button" id="submit-button" class="temp__sent upload_chk">確認送出</button>
       </div>
 
 
 
 
-      <div class="temp__item">
+      <div id="mission3" class="temp__item">
         <p class="temp__itemName">任務３：參加筆電健檢活動</p>
         <p class="description">上傳筆電健檢問卷調查表，第三頁截圖即可完成任務。</p>
         <div class="list">
@@ -486,28 +491,35 @@
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
+              <td>
+                <div class="upload_check done"></div>
+              </td>
+              <td>
+                  <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value=""  placeholder="2022/xx/xx" >
+              </td>
+              <td>
+                <button type="button"  class="temp__sent upload_action">上傳</button>
+              </td>
+              <td>
+                <button type="button"  class="temp__sent upload_del">刪除</button>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
       <p>
-        <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank">S/N碼圖例</a> &nbsp; &nbsp; &nbsp;
-        <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">IMEI碼圖例</a>
+        <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank">第三頁截圖示意</a> &nbsp; &nbsp; &nbsp;        
       </p>
     </div>
 
 
-    <div class="temp__sentBox2">
-      <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
+    <div id="mission3_send" class="temp__sentBox2">
+      <button type="button" id="submit-button" class="temp__sent upload_chk">確認送出</button>
     </div>
 
 
 
-    <div class="temp__item">
+    <div id="mission4" class="temp__item">
       <p class="temp__itemName">任務4：筆電升級超級終端 ( HUAWEI PC Manager )</p>
       <p class="description">已經成功升級了嗎?立即寫下筆電本號，即可完成任務。</p>
       <div class="list">
@@ -522,17 +534,24 @@
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
+            <td>
+              <div class="upload_check done"></div>
+            </td>
+            <td>
+                <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value="" placeholder="版本號12以下不符合任務標準">
+            </td>
+            <td>
+              <button type="button"  class="temp__sent upload_action">上傳</button>
+            </td>
+            <td>
+              <button type="button"  class="temp__sent upload_del">刪除</button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
     <p>
-      <a href="/assets/images/activity/sn-sample.jpg" data-fancybox="snimei-sample" target="_blank">S/N碼圖例</a> &nbsp; &nbsp; &nbsp;
-      <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">IMEI碼圖例</a>
+      <a   target="_blank">&nbsp; &nbsp; &nbsp;</a> 
     </p>
   </div>
 
@@ -622,9 +641,11 @@
               <p class="temp__note">本人已詳閱並完全了解及同意有關本次<a style="text-decoration: underline;" href="#privacy">活動個資蒐集利用之聲明</a>，本人並同意主辦單位得將所蒐集之個人資料依本聲明之規定進行後續所需之利用與處理。</p>
             </label>
           </div>
-          <div class="temp__sentBox">
-            <button type="button" id="submit-button" class="temp__sent submit-btn">確認送出</button>
+          <div  id="mission4_send" class="temp__sentBox">
+            <button type="button" class="temp__sent upload_chk">確認送出</button>
           </div>
+
+
         </form>
       </div>
       <!-- /article -->
