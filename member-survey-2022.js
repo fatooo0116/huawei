@@ -75,7 +75,15 @@ $(function (){
 
 
   function fancyAlert3(content) {
-      $.fancybox.open('<div id="award_outter" class="fancyalert-content">' + content + "</div>");
+      $.fancybox.open({
+        src:'<div id="award_outter" class="fancyalert-content">' + content + "</div>",
+        type : 'inline',
+        overlay : {closeClick: false},
+        mobile: {
+          clickSlide: false,
+          touch: false
+        },
+    });
   }
 
 
@@ -432,6 +440,8 @@ $(function (){
                     $("#award_box > div").fadeOut('500',function(){
                       let result = '<div id="award_info"><div class="top"><img src="assets/img/award_top.png"></div><div class="bottom"><img src="assets/img/award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
     
+                       result += '<div id="award_info_mb"><div class="top"><img src="assets/img/mb_award_top.png"></div><div class="bottom"><img src="assets/img/mb_award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
+
                       $("#award_box").html(result );
     
                       $(".exit_btn").on('click',function(e){
