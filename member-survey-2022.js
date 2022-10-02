@@ -291,9 +291,9 @@ $(function (){
           return;
         }
         // 檢查格式
+        /*
         if(!validateSnImei(snimei)) {
-          fancyAlert('產品「' + productName + '」的S/N或者IMEI碼格式不正確。');
-          //return;
+          fancyAlert('產品「' + productName + '」的S/N或者IMEI碼格式不正確。');          
         }
         else {
           // 檢查重複
@@ -303,8 +303,9 @@ $(function (){
             //return;
           }
         }
+        */
         // Update
-        targetProduct.snimei = snimei;
+        // targetProduct.snimei = snimei;
       });
 
       // 用途輸入欄位
@@ -543,7 +544,9 @@ $(function (){
           return;
       }
 
+      
       // Products
+      /*
       if(selectedProducts['owner'].length == 0) {
         fancyAlert('您尚未填寫正在使用的產品資料。');
         return;
@@ -563,6 +566,7 @@ $(function (){
           return;
         }
       }
+      */
       
       /*
       var duplicates = findDuplicateNames('owner');
@@ -572,6 +576,7 @@ $(function (){
       }
       */
 
+      /*
       var duplicates = findDuplicateSnImei('owner');
       if(duplicates.length > 0) {
         fancyAlert('已擁有產品中有重複的S/N碼或IMEI碼「' + duplicates[0].snimei + '」。');
@@ -601,8 +606,10 @@ $(function (){
           $("#agree").focus();
           return;
       }
+      */
 
 
+      /** ===== Tasker1 ===== */
 
       
 
@@ -628,12 +635,19 @@ $(function (){
           county: $("select[name='county']").val(),
           area: $("select[name='district']").val(),
           address: $('#address').val(),
-          has_huawei_id: $('#has_huawei_id')[0].checked ? 'y' : 'n',
-          has_huawei_cloud: $('#has_huawei_cloud')[0].checked ? 'y' : 'n',
-          has_app_gallery: $('#has_app_gallery')[0].checked ? 'y' : 'n',
+        //  has_huawei_id: $('#has_huawei_id')[0].checked ? 'y' : 'n',
+        //  has_huawei_cloud: $('#has_huawei_cloud')[0].checked ? 'y' : 'n',
+        //  has_app_gallery: $('#has_app_gallery')[0].checked ? 'y' : 'n',
           products: selectedProducts,
       };
 
+
+      console.log(formData);
+
+
+
+
+      /*
       var jqxhr = $.ajax({
             url: app.config.API_BASE + '/events/member-survey-2022/entries',
             method: 'POST',
@@ -691,5 +705,191 @@ $(function (){
                     fancyAlert('很抱歉，目前無法處理您的資料。');
             }
         });
+        */
     });
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var task01={};
+    var task02={};
+    var task03={};
+    var task04={};
+
+
+
+   // 上傳按鈕
+   $('input[type=file]').off('change').on('change', function (e) {
+    var file = $(this).prop('files')[0];
+    if (!file) return;
+
+    var key = $(this).attr('data-key');
+    var fileName = file.name;
+    var size = Math.floor(file.size / 1024 / 1024);
+    if (file.type != 'image/jpg' && file.type != 'image/jpeg') {
+      alert('請上傳正確jpg格式圖片檔案。');
+      return;
+    };
+    if(size > 5) {
+      alert('上傳的檔案大小超過5MB限制。');
+      return;
+    }
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      console.log('FileReader onload');
+      // var product = findProductByKey('owner', key);
+      
+      task01.image = this.result.substring(this.result.lastIndexOf(",") + 1);
+      // product.image = this.result.substring(this.result.lastIndexOf(",") + 1);
+      // console.log(selectedProducts);
+      // console.log(task01);
+      $('#thumb-' + key).empty().append('<a data-fancybox="thumb" class="thumb" href="' + this.result + '"><img src="' + this.result + '" /></a>');
+    };
+    reader.readAsDataURL(file);
+  });
+
+
+  // 刪除按鈕
+  $('a[data-role="remove"]').off('click').on('click', function(e) {
+    e.preventDefault();
+
+    var key = $(this).attr('data-key');
+    $('#thumb-' + key).empty();
+    $("#"+key).remove();
+    
+    // var rel = $(this).data('rel');
+    // var key = $(this).data('key');
+    // removeProduct(rel, key);
+    $("#"+key+"_box").append('<input id="'+key+'" data-key="'+key+'" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg"></input>');
+  });
+
+
+
+
+
+
+
+    $('#tasker1_submit,#tasker2_submit,#tasker3_submit,#tasker4_submit').on('click', function(e) {
+      e.preventDefault();      
+      if (sending == true) {
+          return;
+      }
+      
+
+      /*
+      if (true !== (result = app.validator.validateName($('#name').val()))) {
+        fancyAlert(result.message);
+        $('#name').focus();
+        return;
+      }
+     if (true !== (result = app.validator.validateMobile($('#mobile').val()))) {
+        fancyAlert(result.message);
+        $('#mobile').focus();
+        return;
+      }
+      if (true !== (result = app.validator.validateEmail($('#email').val()))) {
+          fancyAlert(result.message);
+          $('#email').focus();
+          return;
+      }
+      if ($("#gender").val() === '') {
+          fancyAlert('請選擇性別');
+          $("#gender").focus();
+          return;
+      }
+      if ($("#dob").val() === '') {
+          fancyAlert('請輸入生日');
+          $("#dob").focus();
+          return;
+      }
+      if ($("select[name='county']").val() === '') {
+          fancyAlert('請選擇縣市');
+          $("select[name='county']").focus();
+          return;
+      }
+      if (true !== (result = app.validator.validateAddres($('#address').val()))) {
+          fancyAlert(result.message);
+          $('#address').focus();
+          return;
+      }
+      */
+
+
+
+
+
+
+    var $btn = $(this);
+    sending = true;
+    $btn.addClass('disabled').text('傳送中...');
+
+    var formData = {
+        name: $('#name').val(),
+        mobile: $('#mobile').val(),
+        email: $('#email').val(),
+        gender: $('#gender').val(),
+        dob: $('#dob').val(),
+        county: $("select[name='county']").val(),
+        area: $("select[name='district']").val(),
+        address: $('#address').val(),
+      //  has_huawei_id: $('#has_huawei_id')[0].checked ? 'y' : 'n',
+      //  has_huawei_cloud: $('#has_huawei_cloud')[0].checked ? 'y' : 'n',
+      //  has_app_gallery: $('#has_app_gallery')[0].checked ? 'y' : 'n',
+       //  products: selectedProducts,
+    };
+
+
+    
+
+
+
+
+
+      
+      let task = $(this).attr('id');
+      switch(task){
+        case 'tasker1_submit':
+          
+          if ($("input[name='huawei_id']").val() === '') {
+              fancyAlert('請輸入華為ID');
+              $("input[name='huawei_id']").focus();
+              return;
+          }
+
+            task01.huawei_id = $("input[name='huawei_id']").val();
+            formData.task01 = task01;          
+          break;
+
+
+        case 'tasker2_submit':
+            console.log(task02);  
+          break;  
+
+        case 'tasker3_submit':
+            console.log(task03);  
+          break;    
+
+        case 'tasker4_submit':
+            console.log(task04);  
+          break;    
+      }
+
+      console.log(formData);   
+    });
+
+
+});  /**    outter  */

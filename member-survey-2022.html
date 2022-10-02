@@ -353,7 +353,7 @@
 
 
 
-          <!--
+          
           <div class="temp__item">
             <p class="temp__itemName">我是花粉我驕傲！</p>
             <p class="description">您正在使用的華為產品有哪些呢？</p>
@@ -398,7 +398,7 @@
               <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">IMEI碼圖例</a>
             </p>
           </div>
-        -->
+        
 
 
 
@@ -424,11 +424,14 @@
                   <td>
                       <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value=""  placeholder="請輸入國碼＋手機號碼" >
                   </td>
-                  <td>
-                    <button type="button"  class="temp__sent upload_action">上傳</button>
+
+                  <td id="task01_box">
+                    <label for="task01" class="upload">上傳</label>
+                    <div   id="thumb-task01" class="thumb"></div>
+                    <input id="task01"  data-key="task01" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg">
                   </td>
                   <td>
-                    <button type="button"  class="temp__sent upload_del">刪除</button>
+                    <a href="#" data-role="remove"  data-key="task01">刪除</a>
                   </td>
                 </tr>
               </tbody>
@@ -441,7 +444,7 @@
 
 
         <div id="mission1_send" class="temp__sentBox2">
-          <button type="button"  class="temp__sent upload_chk">確認送出</button>
+          <button type="button"  id="tasker1_submit"  class="temp__sent">確認送出</button>
         </div>
 
 
@@ -490,7 +493,7 @@
 
 
       <div  id="mission2_send"   class="temp__sentBox2">
-        <button type="button" class="temp__sent upload_chk" style="color:#fe2929">點我抽獎！！</button>
+        <button type="button" id="tasker2_submit" class="temp__sent upload_chk" style="color:#fe2929">點我抽獎！！</button>
       </div>
 
 
@@ -534,7 +537,7 @@
 
 
     <div id="mission3_send" class="temp__sentBox2">
-      <button type="button"  class="temp__sent upload_chk">確認送出</button>
+      <button type="button"  id="tasker3_submit"   class="temp__sent upload_chk">確認送出</button>
     </div>
 
 
@@ -571,89 +574,33 @@
       </table>
     </div>
     <p>
-      <a href="assets/img/mission4_pic.jpg" data-fancybox="id-sample" target="_blank">筆電升級超級終端示意圖</a> &nbsp; &nbsp; &nbsp;           
+      <a href="assets/img/mission4_pic.jpg"  data-fancybox="id-sample" target="_blank">筆電升級超級終端示意圖</a> &nbsp; &nbsp; &nbsp;           
     </p>
   </div>
 
+
+  
   
 
+  <div class="temp__sentBox">
+    <button  id="tasker4_submit"   type="button" class="temp__sent">確認送出1</button>
+  </div>
 
 
 
+  <div  id="mission4_send"    class="temp__sentBox">
+    <button   id="submit-button"  type="button" class="temp__sent upload_chk">確認送出</button>
+  </div>
 
-        <!--
-          <div class="temp__item">
-            <p class="temp__itemName">花粉夢想清單</p>
-            <p class="description">還想擁有更多華為產品嗎？請寫下您的夢想清單。</p>
-            <div class="flex">
-              <div>
-                <select id="product-category-wishlist" data-role="product-category" data-rel="wishlist" class="temp__select">
-                  <option value="">請選擇產品類別</option>
-                  <option value="laptop">筆記型電腦</option>
-                  <option value="tablet">平板電腦</option>
-                  <option value="wearable">穿戴裝置</option>
-                  <option value="audio">音頻產品</option>
-                  <option value="smartphone">智慧型手機</option>
-                  <option value="mateview">MateView</option>
-                  <option value="wifi">WiFi系列</option>
-                  <option value="none">無</option>
-                </select>
-              </div>
-              <div class="center">
-                <select id="product-list-wishlist" data-role="product-list" class="temp__select">
-                  <option value="">--</option>
-                </select>
-              </div>
-              <button type="button" data-role="add-product" data-rel="wishlist" class="temp__sent">新增產品</button>
-            </div>
-            <div class="list">
-              <table id="product-table-wishlist">
-                <thead>
-                  <tr>
-                    <th class="category">類別</th>
-                    <th>產品名稱</th>
-                    <th>用途</th>
-                    <th>功能</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        -->
+  <div id="mission1_send" class="temp__sentBox2">
+    <button type="button"    class="temp__sent upload_chk">確認送出demo1</button>
+  </div>
 
+  <div id="mission2_send" class="temp__sentBox2">
+    <button type="button"    class="temp__sent upload_chk">確認送出demo2</button>
+  </div>
 
         <!--
-          <div class="temp__item">
-            <p class="temp__itemName">請問您還有使用過華為哪些服務？</p>
-            <div>
-              <input id="has_huawei_id" type="checkbox" value="y"  />
-              <label for="has_huawei_id" class="temp__label">
-                <div class="temp__square"></div>
-                <p>註冊華為ID</p>
-              </label>
-            </div>
-            <div>
-              <input id="has_huawei_cloud" type="checkbox" value="y"  />
-              <label for="has_huawei_cloud" class="temp__label">
-                <div class="temp__square"></div>
-                <p>華為雲服務</p>
-              </label>
-            </div>
-            <div>
-              <input id="has_app_gallery" type="checkbox" value="y"  />
-              <label for="has_app_gallery" class="temp__label">
-                <div class="temp__square"></div>
-                <p>AppGallery</p>
-              </label>
-            </div>
-          </div>
-        -->
-
-
-
-
           <div class="temp__item temp__check">
             <input id="agree" type="checkbox" value="y" />
             <label for="agree" class="temp__label">
@@ -661,9 +608,8 @@
               <p class="temp__note">本人已詳閱並完全了解及同意有關本次<a style="text-decoration: underline;" href="#privacy">活動個資蒐集利用之聲明</a>，本人並同意主辦單位得將所蒐集之個人資料依本聲明之規定進行後續所需之利用與處理。</p>
             </label>
           </div>
-          <div  id="mission4_send" class="temp__sentBox">
-            <button   id="submit-button"  type="button" class="temp__sent upload_chk">確認送出</button>
-          </div>
+        -->
+ 
 
 
         </form>
