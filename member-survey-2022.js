@@ -1,4 +1,10 @@
 $(function (){
+
+
+
+  
+
+
     var twzipcodeOptions = _viewData.user ? {
       'countySel': _viewData.user.county,
       'districtSel': _viewData.user.area
@@ -960,6 +966,16 @@ $(function (){
 
 
       console.log(formData);   
+    });
+
+
+
+
+
+    var cleave = new Cleave('.input-date', {
+      date: true,
+      delimiter: '/',
+      datePattern: ['Y', 'm', 'd']
     });
 
 
