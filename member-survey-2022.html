@@ -353,7 +353,7 @@
 
 
 
-          
+          <!--
           <div class="temp__item">
             <p class="temp__itemName">我是花粉我驕傲！</p>
             <p class="description">您正在使用的華為產品有哪些呢？</p>
@@ -398,10 +398,10 @@
               <a href="/assets/images/activity/imei-sample.jpg" data-fancybox="snimei-sample" target="_blank">IMEI碼圖例</a>
             </p>
           </div>
-        
+        -->
 
 
-
+          <!--  ####################  任務1   ####################  -->
 
           <div  id="mission1" class="temp__item">
             <p class="temp__itemName">任務1：註冊華為ID</p>
@@ -428,7 +428,7 @@
                   <td id="task01_box">
                     <label for="task01" class="upload">上傳</label>
                     <div   id="thumb-task01" class="thumb"></div>
-                    <input id="task01"  data-key="task01" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg">
+                    <input id="task01"  data-key="task01"  name="task01" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg">
                   </td>
                   <td>
                     <a href="#" data-role="remove"  data-key="task01">刪除</a>
@@ -443,12 +443,18 @@
         </div>
 
 
-        <div id="mission1_send" class="temp__sentBox2">
+        <div  class="temp__sentBox2">
           <button type="button"  id="tasker1_submit"  class="temp__sent">確認送出</button>
         </div>
 
 
 
+
+
+
+
+
+        <!--  ####################  任務2   ####################  -->
 
 
         <div  id="mission2"  class="temp__item">
@@ -467,20 +473,26 @@
             <tbody>
               <tr>
                 <td><div class="upload_check done"></div></td>
-                <td><input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value=""  placeholder="50 GB以下不符合任務標準" ></td>
                 <td>
-                  <button type="button"  class="temp__sent upload_action">上傳</button>
+                  <input  type="text"  id="huawei_cloud"  name="huawei_cloud" required="" maxlength="20" class="temp__input" value=""  placeholder="50 GB以下不符合任務標準" >
+                </td>
+
+                <td id="task02_box">
+                  <label for="task02" class="upload">上傳</label>
+                  <div   id="thumb-task02" class="thumb"></div>
+                  <input id="task02"  data-key="task02"  name="task02" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg">
                 </td>
                 <td>
-                  <button type="button"  class="temp__sent upload_del">刪除</button>
+                  <a href="#" data-role="remove"  data-key="task02">刪除</a>
                 </td>
               </tr>
+
               <tr>
                 <td><a href="#">GB示意圖</a></td>
                 <td colspan="2"><a href="#">若未達50GB，可立即使用<br/>
                   華為平板或手機開通50GB雲空間(12月底前免費)
                   </a></td>
-                <td> <button type="button"  class="temp__sent submit-btn">立即申請</button></td>
+                <td> <a href="https://consumer.huawei.com/hk/mobileservices/mobilecloud/"  target="_blank"   class="temp__sent submit-btn">立即申請</a> </td>
               </tr>
             </tbody>
           </table>
@@ -490,11 +502,14 @@
         </p>
       </div>
 
-
-
       <div  id="mission2_send"   class="temp__sentBox2">
-        <button type="button" id="tasker2_submit" class="temp__sent upload_chk" style="color:#fe2929">點我抽獎！！</button>
+        <button type="button" id="tasker2_submit" class="temp__sent " >確認送出</button>
       </div>
+
+
+
+
+      <!--  ####################  任務3   ####################  -->
 
 
 
@@ -517,15 +532,17 @@
               <td>
                 <div class="upload_check done"></div>
               </td>
-              <td>
-                  <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value=""  placeholder="2022/xx/xx" >
-              </td>
-              <td>
-                <button type="button"  class="temp__sent upload_action">上傳</button>
-              </td>
-              <td>
-                <button type="button"  class="temp__sent upload_del">刪除</button>
-              </td>
+                <td>
+                    <input  type="text" name="huawei_health" required="" maxlength="20" class="temp__input" value=""  placeholder="2022/xx/xx" >
+                </td>
+                <td id="task03_box">
+                  <label for="task03" class="upload">上傳</label>
+                  <div   id="thumb-task03" class="thumb"></div>
+                  <input id="task03"  data-key="task03"  name="task03" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg">
+                </td>
+                <td>
+                  <a href="#" data-role="remove"  data-key="task03">刪除</a>
+                </td>
             </tr>
           </tbody>
         </table>
@@ -539,6 +556,15 @@
     <div id="mission3_send" class="temp__sentBox2">
       <button type="button"  id="tasker3_submit"   class="temp__sent upload_chk">確認送出</button>
     </div>
+
+
+
+
+
+
+
+
+  <!--  ####################  任務4   ####################  -->
 
 
 
@@ -561,13 +587,15 @@
               <div class="upload_check done"></div>
             </td>
             <td>
-                <input  type="text" name="huawei_id" required="" maxlength="20" class="temp__input" value="" placeholder="版本號12以下不符合任務標準">
+                <input  type="text" name="huawei_nbver" required="" maxlength="20" class="temp__input" value="" placeholder="版本號12以下不符合任務標準">
+            </td>
+            <td id="task04_box">
+              <label for="task04" class="upload">上傳</label>
+              <div   id="thumb-task04" class="thumb"></div>
+              <input id="task04"  data-key="task04"  name="task04" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg">
             </td>
             <td>
-              <button type="button"  class="temp__sent upload_action">上傳</button>
-            </td>
-            <td>
-              <button type="button"  class="temp__sent upload_del">刪除</button>
+              <a href="#" data-role="remove"  data-key="task04">刪除</a>
             </td>
           </tr>
         </tbody>
@@ -579,18 +607,20 @@
   </div>
 
 
-  
-  
-
   <div class="temp__sentBox">
-    <button  id="tasker4_submit"   type="button" class="temp__sent">確認送出1</button>
+    <button  id="tasker4_submit"   type="button" class="temp__sent">確認送出</button>
   </div>
 
 
 
+  <!--  ####################  End   ####################  -->
+
+
+<!--
   <div  id="mission4_send"    class="temp__sentBox">
     <button   id="submit-button"  type="button" class="temp__sent upload_chk">確認送出</button>
   </div>
+-->
 
   <div id="mission1_send" class="temp__sentBox2">
     <button type="button"    class="temp__sent upload_chk">確認送出demo1</button>

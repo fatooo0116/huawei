@@ -732,35 +732,51 @@ $(function (){
 
 
    // 上傳按鈕
-   $('input[type=file]').off('change').on('change', function (e) {
-    var file = $(this).prop('files')[0];
-    if (!file) return;
+   let bind_upload  = function(){
+      $('input[type=file]').off('change').on('change', function (e) {
+        var file = $(this).prop('files')[0];
+        if (!file) return;
+    
+        var key = $(this).attr('data-key');
+        var fileName = file.name;
+        var size = Math.floor(file.size / 1024 / 1024);
+        if (file.type != 'image/jpg' && file.type != 'image/jpeg') {
+          alert('請上傳正確jpg格式圖片檔案。');
+          return;
+        };
+        if(size > 5) {
+          alert('上傳的檔案大小超過5MB限制。');
+          return;
+        }
+    
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          console.log('FileReader onload');
+          // var product = findProductByKey('owner', key);
 
-    var key = $(this).attr('data-key');
-    var fileName = file.name;
-    var size = Math.floor(file.size / 1024 / 1024);
-    if (file.type != 'image/jpg' && file.type != 'image/jpeg') {
-      alert('請上傳正確jpg格式圖片檔案。');
-      return;
-    };
-    if(size > 5) {
-      alert('上傳的檔案大小超過5MB限制。');
-      return;
-    }
+          if(key=='task01'){
+            task01.image = this.result.substring(this.result.lastIndexOf(",") + 1);
+          }
+          if(key=='task02'){
+            task02.image = this.result.substring(this.result.lastIndexOf(",") + 1);
+          }
+          if(key=='task03'){
+            task03.image = this.result.substring(this.result.lastIndexOf(",") + 1);
+          }
+          if(key=='task04'){
+            task04.image = this.result.substring(this.result.lastIndexOf(",") + 1);
+          }
+          
+          // product.image = this.result.substring(this.result.lastIndexOf(",") + 1);
+          // console.log(selectedProducts);
+          // console.log(task01);
+          $('#thumb-' + key).empty().append('<a data-fancybox="thumb" class="thumb" href="' + this.result + '"><img src="' + this.result + '" /></a>');
+        };
+        reader.readAsDataURL(file);
+      });
+   }
+   bind_upload();
 
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      console.log('FileReader onload');
-      // var product = findProductByKey('owner', key);
-      
-      task01.image = this.result.substring(this.result.lastIndexOf(",") + 1);
-      // product.image = this.result.substring(this.result.lastIndexOf(",") + 1);
-      // console.log(selectedProducts);
-      // console.log(task01);
-      $('#thumb-' + key).empty().append('<a data-fancybox="thumb" class="thumb" href="' + this.result + '"><img src="' + this.result + '" /></a>');
-    };
-    reader.readAsDataURL(file);
-  });
 
 
   // 刪除按鈕
@@ -774,14 +790,13 @@ $(function (){
     // var rel = $(this).data('rel');
     // var key = $(this).data('key');
     // removeProduct(rel, key);
-    $("#"+key+"_box").append('<input id="'+key+'" data-key="'+key+'" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg"></input>');
+    $("#"+key+"_box").append('<input id="'+key+'" data-key="'+key+'"  name="'+key+'" data-product="" data-role="product-image" type="file" required="" accept=".jpg,.jpeg"></input>');
+    bind_upload();
   });
 
 
 
-
-
-
+  
 
     $('#tasker1_submit,#tasker2_submit,#tasker3_submit,#tasker4_submit').on('click', function(e) {
       e.preventDefault();      
@@ -828,16 +843,7 @@ $(function (){
       }
       */
 
-
-
-
-
-
-    var $btn = $(this);
-    sending = true;
-    $btn.addClass('disabled').text('傳送中...');
-
-    var formData = {
+      var formData = {
         name: $('#name').val(),
         mobile: $('#mobile').val(),
         email: $('#email').val(),
@@ -849,14 +855,8 @@ $(function (){
       //  has_huawei_id: $('#has_huawei_id')[0].checked ? 'y' : 'n',
       //  has_huawei_cloud: $('#has_huawei_cloud')[0].checked ? 'y' : 'n',
       //  has_app_gallery: $('#has_app_gallery')[0].checked ? 'y' : 'n',
-       //  products: selectedProducts,
-    };
-
-
-    
-
-
-
+      //  products: selectedProducts,
+      };
 
 
       
@@ -870,23 +870,94 @@ $(function (){
               return;
           }
 
+          if ($("input[name='task01']").val() === '') {
+            fancyAlert('請上傳華為ID圖片');
+            $("input[name='task01']").focus();
+            return;
+          } 
+
+          
             task01.huawei_id = $("input[name='huawei_id']").val();
             formData.task01 = task01;          
           break;
 
 
         case 'tasker2_submit':
+            if ($("input[name='huawei_cloud']").val() === '') {
+              fancyAlert('請輸入你的雲空間總GB數');
+              $("input[name='huawei_space']").focus();
+              return;
+            }
+
+            if ($("input[name='task02']").val() === '') {
+              fancyAlert('請上傳華為雲空間總GB圖');
+              $("input[name='task02']").focus();
+              return;
+            } 
+
+            task02.huawei_cloud = $("input[name='huawei_id']").val();
+            formData.task02 = task02;   
             console.log(task02);  
           break;  
 
+
+
         case 'tasker3_submit':
+            if ($("input[name='huawei_health']").val() === '') {
+              fancyAlert('請輸入筆電健檢日期');
+              $("input[name='huawei_health']").focus();
+              return;
+            }
+
+            if ($("input[name='task03']").val() === '') {
+              fancyAlert('請上傳筆電健檢問券調查表');
+              $("input[name='task03']").focus();
+              return;
+            } 
+
+            task03.huawei_health = $("input[name='huawei_health']").val();
+            formData.task03 = task03;   
             console.log(task03);  
           break;    
 
+
         case 'tasker4_submit':
-            console.log(task04);  
+          if($("input[name='huawei_nbver']").val() === '') {
+            fancyAlert('請輸入你的華為筆電版本號');
+            $("input[name='huawei_nbver']").focus();
+            return;
+          }
+
+          if ($("input[name='task04']").val() === '') {
+            fancyAlert('請上傳華為ID截圖');
+            $("input[name='task04']").focus();
+            return;
+          } 
+          task04.huawei_huawei_nbver = $("input[name='huawei_nbver']").val();
+          formData.task04 = task04;   
+           
+          console.log(task04);  
           break;    
-      }
+      } /** switch */
+
+
+
+      var $btn = $(this);
+      sending = true;
+      $btn.addClass('disabled').text('傳送中...');
+
+
+
+      setTimeout(function(){
+        sending = false;
+        alert('傳送ok');
+      },1000);
+    
+
+
+
+
+
 
       console.log(formData);   
     });
