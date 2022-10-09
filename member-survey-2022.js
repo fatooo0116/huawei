@@ -858,6 +858,7 @@ $(function (){
         county: $("select[name='county']").val(),
         area: $("select[name='district']").val(),
         address: $('#address').val(),
+        tasks:{}
       //  has_huawei_id: $('#has_huawei_id')[0].checked ? 'y' : 'n',
       //  has_huawei_cloud: $('#has_huawei_cloud')[0].checked ? 'y' : 'n',
       //  has_app_gallery: $('#has_app_gallery')[0].checked ? 'y' : 'n',
@@ -883,8 +884,9 @@ $(function (){
           } 
 
           
-            task01.huawei_id = $("input[name='huawei_id']").val();
-            formData.task01 = task01;          
+            task01.key = $("input[name='huawei_id']").val();
+            
+            formData.tasks.task01 = task01;          
           break;
 
 
@@ -901,8 +903,8 @@ $(function (){
               return;
             } 
 
-            task02.huawei_cloud = $("input[name='huawei_id']").val();
-            formData.task02 = task02;   
+            task02.key = $("input[name='huawei_cloud']").val();
+            formData.tasks.task02 = task02;   
             console.log(task02);  
           break;  
 
@@ -921,8 +923,8 @@ $(function (){
               return;
             } 
 
-            task03.huawei_health = $("input[name='huawei_health']").val();
-            formData.task03 = task03;   
+            task03.key = $("input[name='huawei_health']").val();
+            formData.tasks.task03 = task03;   
             console.log(task03);  
           break;    
 
@@ -939,8 +941,8 @@ $(function (){
             $("input[name='task04']").focus();
             return;
           } 
-          task04.huawei_huawei_nbver = $("input[name='huawei_nbver']").val();
-          formData.task04 = task04;   
+          task04.key = $("input[name='huawei_nbver']").val();
+          formData.tasks.task04 = task04;   
            
           console.log(task04);  
           break;    
