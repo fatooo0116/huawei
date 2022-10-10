@@ -444,10 +444,65 @@ $(function (){
                   
                   if(ipt==44){
 
+                    console.log(idx);
+
+                    let final_result = idx;
+                
+                    let award_img = '';
+                    let mb_award_img = '';
+
+                    switch(final_result){
+                      case 1:
+                        award_img = 'award_top1_500.png';
+                        mb_award_img = 'mb_award_top_500.png';
+                        break;
+
+                      case 2:
+                        award_img = 'award_top1_3000.png';
+                        mb_award_img = 'mb_award_top_3000.png';
+                        break;
+
+                      case 3:
+                        award_img = 'award_top1_3000.png';
+                        mb_award_img = 'mb_award_top_3000.png';
+                        break;
+
+                      case 4:
+                        award_img = 'award_top1_1000.png';
+                        mb_award_img = 'mb_award_top_1000.png';
+                        break;
+
+                      case 5:
+                        award_img = 'award_top1_1000.png';
+                        mb_award_img = 'mb_award_top_1000.png';
+                        break; 
+                
+                      case 6:
+                        award_img = 'award_top1_3000.png';
+                        mb_award_img = 'mb_award_top_3000.png';
+                        break;  
+
+                      case 7:
+                        award_img = 'award_top1_500.png';
+                        mb_award_img = 'mb_award_top_500.png';
+                        break;  
+                        
+                      case 8:
+                        award_img = 'award_top1_500.png';
+                        mb_award_img = 'mb_award_top_500.png';
+                        break;  
+                                         
+                    }
+
+
+                    console.log(award_img);
+
+
+
                     $("#award_box > div").fadeOut('500',function(){
-                      let result = '<div id="award_info"><div class="top"><img src="assets/img/award_top.png"></div><div class="bottom"><img src="assets/img/award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
+                      let result = '<div id="award_info"><div class="top"><img src="assets/img/'+award_img+'"></div><div class="bottom"><img src="assets/img/award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
     
-                       result += '<div id="award_info_mb"><div class="top"><img src="assets/img/mb_award_top.png"></div><div class="bottom"><img src="assets/img/mb_award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
+                       result += '<div id="award_info_mb"><div class="top"><img src="assets/img/'+mb_award_img+'"></div><div class="bottom"><img src="assets/img/mb_award_bottom.svg"></div><a href="#" class="action exit_btn"><img src="assets/img/btn2.svg"></a></div>';
 
                       $("#award_box").html(result );
     
