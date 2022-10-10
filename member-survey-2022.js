@@ -421,7 +421,7 @@ $(function (){
 
 
               for(i=0;i<45;i++){
-                let idx = getRandomInt(9);
+                let idx = getRandomInt(8);
                
                // console.log(idx);
                 let ipt = i;
@@ -430,6 +430,7 @@ $(function (){
                   $("#award_box .cbox").removeClass('active');
 
                   // console.log(i);
+                  idx = idx+1;
                   $("#cbox"+idx).addClass('active');
                   /*
                   if(ipt<16){
@@ -463,8 +464,8 @@ $(function (){
                         break;
 
                       case 3:
-                        award_img = 'award_top1_3000.png';
-                        mb_award_img = 'mb_award_top_3000.png';
+                        award_img = 'award_top1_500.png';
+                        mb_award_img = 'mb_award_top_500.png';
                         break;
 
                       case 4:
@@ -472,10 +473,12 @@ $(function (){
                         mb_award_img = 'mb_award_top_1000.png';
                         break;
 
+
                       case 5:
                         award_img = 'award_top1_1000.png';
                         mb_award_img = 'mb_award_top_1000.png';
-                        break; 
+                          break;      
+                
                 
                       case 6:
                         award_img = 'award_top1_3000.png';
